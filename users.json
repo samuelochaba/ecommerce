@@ -3,5 +3,15 @@
     "email": "sammymadgenius@gmail.com",
     "password": "1234",
     "id": "c41e3504"
+  },
+  {
+    "email": "test4@test.com",
+    "password": "edc8362ed1c5f22c79206bfbb39dfcb6d92be6a4160ad52d9d9470e3f34665dc415f90a21e6f3d971ab655d8e9d62d81b271b7f0be29ff0b980765a6f5b56a58.6addc5648bc589b2",
+    "id": "c0ba62df"
+  },
+  {
+    "email": "test2@test.com",
+    "password": "ea976b5fbda5f437416524da65dc5a24f535e07e3a5378917d1065a45359285df7f4625a8f936cfa21b6d1ef8c255d51e3f9e36e4d2dd6cf7ae9230eb61f7724.21a69f500dfc375b",
+    "id": "cecc4c1c"
   }
 ]
