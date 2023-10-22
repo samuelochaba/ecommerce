@@ -28,6 +28,13 @@ class UsersRepository {
 
   async create(attrs) {
     attrs.id = this.randomId();
+
+    const salt = crypto.randomBytes(8).toString("hex");
+
+    scrypt(attrs.password, salt, 64, () => (err, buf) => {
+      const hashed = buff.toString("hex");
+    });
+
     const records = await this.getAll();
     records.push(attrs);
 
@@ -78,7 +85,7 @@ class UsersRepository {
     for (let record of records) {
       let found = true;
       for (let key in filters) {
-        if (record[key] !== filter[key]) {
+        if (record[key] !== filters[key]) {
           found = false;
         }
       }
