@@ -1,5 +1,4 @@
 const express = require("express");
-const { check, validationResult, body } = require("express-validator");
 const usersRepo = require("../../repositories/users");
 const signupTemplate = require("../../views/admin/auth/signup");
 const signinTemplate = require("../../views/admin/auth/signin");
@@ -11,6 +10,7 @@ const {
   requireValidPasswordForUser,
 } = require("./validators");
 const { error } = require("console");
+const { handleErrors } = require("./middlewares");
 
 const router = express.Router();
 
@@ -27,6 +27,8 @@ router.post(
     if (!errors.isEmpty()) {
       return res.send(signupTemplate({ req, errors }));
     }
+
+    handleErrors(signinTemplate);
 
     const { email, password } = req.body;
 
