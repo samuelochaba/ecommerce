@@ -6,9 +6,9 @@ const Repository = require("./repository");
 const scrypt = util.promisify(crypto.scrypt);
 
 class UsersRepository extends Repository {
-  // constructor(filename) {
-  //   super(filename);
-  // }
+  constructor(filename) {
+    super(filename);
+  }
   async create(attrs) {
     attrs.id = this.randomId();
 
